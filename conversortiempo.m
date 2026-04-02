@@ -1,0 +1,20 @@
+function [seg,min,hor,dia,sem,mes,a]=conversortiempo(totalseg)
+div1=totalseg/31536000;
+a=floor(div1);
+resto_a=mod(totalseg,31536000);
+div2=resto_a/2592000;
+mes=floor(div2);
+resto_mes=mod(div2,2592000);
+div3=resto_mes/604800;
+sem=floor(div3);
+resto_sem=mod(div3,604800);
+div4=resto_sem/86400;
+dia=floor(div4);
+resto_dia=mod(div4,86400);
+div5=resto_dia/3600;
+hor=floor(div5);
+resto_hora=mod(div5,3600);
+div6=resto_hora/60;
+min=floor(div6);
+seg=mod(min,60);
+end

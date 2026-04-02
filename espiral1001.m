@@ -1,0 +1,13 @@
+v= 1:2:1001 ;
+d2 = v.^2;
+w =[0,2:2:1001] ;
+d1 = d2 - w;
+d3 = d1 - w;
+d4 = d3 - w;
+a= sum(d1) - 1;
+b= sum(d4);
+dia_des = a + b;
+c= sum(d3) - 1;
+d= sum(d2);
+dia_asc = c + d;
+total = dia_asc + dia_des;
